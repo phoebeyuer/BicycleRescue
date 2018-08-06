@@ -1,6 +1,8 @@
 Page({
   data: {
-
+    indexHelp: "帮助",
+    indexRecord: "记录",
+    indexPerson: "个人",
   },
   onLoad: function (options) {
 

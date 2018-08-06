@@ -47,4 +47,13 @@
             </view>
         </view>
     </view>
+  <view class="bottom-pic">
+    <image src="/image/index-bottom-bg.png"/>    
+    <!-- 导航栏按钮 -->
+    <view class="bottom-nav">
+      <view class="index-nav" style="color:#0fe4a1"><image src="/static/img/tabBar/icon_help_active.png"/><text>{{indexHelp}}</text></view>
+      <navigator class="index-nav" url="/pages/index/index" open-type="navigateBack" delta="10"><image src="/static/img/tabBar/icon_record.png"/><text>{{indexRecord}}</text></navigator>
+      <navigator class="index-nav" url="/pages/person/person"><image src="/image/index-person-btn.png"/><text>{{indexPerson}}</text></navigator>
+    </view>
+  </view>   
 </view>

@@ -3,7 +3,7 @@
   <!-- 上传图片组件 -->
   <view class="recording-picture">
     <view wx:for="{{picList}}" wx:key="id" data-index="{{index}}" class="recording-pic" bindlongtap="deletePic" bindtap="previewPic" bindtouchstart="bindtouchstart" bindtouchend="bindtouchend">
-      <image class="recording-pic-path" src='{{item}}'/>   
+      <image class="recording-pic-path" src='{{item}}' mode="aspectFill"/>   
     </view>
   <!-- 十字图形及背景 -->
     <view bindtap="uploadPic" class="{{crossShow ? 'cross-container' : 'cross-hidden'}}" style="left:{{crossLeft}}px;">

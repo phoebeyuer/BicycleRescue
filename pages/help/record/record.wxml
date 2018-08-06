@@ -17,7 +17,7 @@
     </view>
     <view class="divide"></view>
     <view class="btn_box">
-        <view class="btn-primary" hover-class="btn-hover">确定提交</view>
-        <view class="btn-default" hover-class="btn-hover" bindtap="goback">取消</view>
+        <view class="upload-btn" bindtap="uploadMessage">确认提交</view>
+        <view class="cancel-btn" bindtap="cancelUpLoad">取消</view>
     </view>
 </view>

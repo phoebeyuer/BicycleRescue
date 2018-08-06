@@ -10,14 +10,14 @@ Page({
   },
   goToHome: function(){
     console.log("回到主页")
-    wx.reLaunch({
-      url: '/pages/index/index'
+    wx.navigateBack({
+      delta: 10
     })
   },
   goToPointPannel: function(){
     console.log("查看积分")
-    wx.reLaunch({
-      url: '/pages/index/index'
+    wx.navigateTo({
+      url: '/pages/person/person'
     })
   },
 })

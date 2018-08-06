@@ -1,2 +1,45 @@
 <!--pages/person/person.wxml-->
-<text>pages/person/person.wxml</text>
+<view class="person-container">
+  <!-- 个人信息展示 -->
+  <view class="person-info">
+    <view class="person-img"><image src="{{personIcon}}" /></view>
+    <view class="person-name">{{personName}}</view>
+    <view class="person-score">我的积分：{{personScore}}分</view>
+  </view>
+
+  <!-- 个人中心栏目条 -->
+  <view class="person-bar-container">
+    <view class="person-bar" 
+          wx:for="{{barList}}" 
+          wx:key="id" id="barItem" 
+          data-message="{{item.message}}">
+      <view class="person-bar-list">
+        <view class="person-icon"><image src="{{item.imgAddr}}" /></view>
+        <view class="person-text-item">{{item.message}}</view>
+        <view class="iconfont"></view>
+      </view>
+    </view>
+  </view>
+
+    <view class="person-bar-container">
+    <view class="person-bar" 
+          wx:for="{{barList2}}" 
+          wx:key="id" id="barItem" 
+          data-message="{{item.message}}">
+      <view class="person-bar-list">
+        <view class="person-icon"><image src="{{item.imgAddr}}" /></view>
+        <view class="person-text-item">{{item.message}}</view>
+        <view class="iconfont"></view>
+      </view>
+    </view>
+  </view>
+
+    <!-- 导航栏按钮 -->
+  <view class="bottom-pic">
+    <view class="bottom-nav">
+      <navigator class="index-nav" url="/pages/help/help"><image src="/image/index-help-btn.png"/><text>{{indexHelp}}</text></navigator>
+      <navigator class="index-nav" url="/pages/index/index" open-type="navigateBack" delta="10"><image src="/static/img/tabBar/icon_record.png"/><text>{{indexRecord}}</text></navigator>
+      <view class="index-nav"  style="color:#0fe4a1"><image src="/static/img/tabBar/icon_person_active.png"/><text>{{indexPerson}}</text></view>
+    </view>
+  </view>   
+</view>

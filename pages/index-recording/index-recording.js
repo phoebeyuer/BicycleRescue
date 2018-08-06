@@ -5,7 +5,7 @@ Page({
   data: {
     showMask: true,
     showTextarea: true,
-    showPickContent: "私自上锁",
+    showPickContent: "选择类型",
     showAddr: "",
     showAddrInput: false,
     InputAddrContent: "",
@@ -40,7 +40,7 @@ Page({
 
   //实例化SDK，设置选择问题页面隐藏，设置十字图案及背景初始位置
   onLoad: function (options) {
-    showMask: (options.showMask == "true"?true:false),
+    showMask: ( options.showMask == "true" ? true : false ),
     qqMapSdk = new QQMap({
       key: 'SP5BZ-2RCEF-SXWJW-NNRYZ-HGDT3-IOFFO'
     }),
@@ -233,24 +233,58 @@ Page({
 
   //点击确定获取当前页面所有数据
   uploadMessage: function(){
-    console.log(this.data.showPickContent),
-    console.log(this.data.recordingText),
-    console.log(this.data.showAddr),
-    console.log(this.data.picList),
-    wx.showToast({
-      title: '上传成功',
-      icon: 'success',
-      duration: 2500,
-      mask: true,
-      success: (res)=>{
-        setTimeout(function(){
-          wx.reLaunch({
-            url: '/pages/index-recorded/index-recorded',
-          })
-        },2500)
+    console.log(this.data.showPickContent);
+    console.log(this.data.recordingText);
+    console.log(this.data.showAddr);
+    console.log(this.data.picList);
+    if(this.data.picList.length == 0) {
+      wx.showToast({
+        title: '请上传记录照片',
+        icon: 'none',
+        duration: 2000,
+        mask: true,
+      })
+    }
+    else if(this.data.showPickContent == '选择类型') {
+      wx.showToast({
+        title: '请选择记录问题类型',
+        icon: 'none',
+        duration: 2000,
+        mask: true,
+      }) 
+    } 
+    else if (this.data.recordingText == '备注：' || this.data.recordingText == '' ||       this.data.recordingText == '备' || this.data.recordingText == '备注') {
+      wx.showToast({
+        title: '请输入备注',
+        icon: 'none',
+        duration: 2000,
+        mask: true,
+      })
+    } 
+    else if (this.data.showAddr == '获取位置失败，请点击手动输入当前位置') {
+      wx.showToast({
+        title: '请输入当前位置',
+        icon: 'none',
+        duration: 2000,
+        mask: true,
+      })
+    }
+    else {
+      wx.showToast({
+        title: '上传成功',
+        icon: 'success',
+        duration: 2500,
+        mask: true,
+        success: (res)=>{
+          setTimeout(function(){
+            wx.navigateTo({
+              url: '/pages/index-recorded/index-recorded',
+            })
+          },2500)
 
-      },
-    })
+        },
+      })
+    }
   },
   getAddr: function() {
     this.setData({

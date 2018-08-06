@@ -249,9 +249,8 @@ page {
 
 /* 上传按钮的样式 */
 .upload-btn {
-  display: inline-block;
+  margin: 0 auto;
   margin-top: 28rpx;
-  margin-left: 105rpx;
   width: 540rpx;
   height: 98rpx;
   line-height: 98rpx;

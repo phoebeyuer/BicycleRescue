@@ -1,3 +1,7 @@
+.title {
+  font-size: 32rpx;
+}
+
 .before_help, .after_help {
     padding: 30rpx;
 }
@@ -33,4 +37,32 @@
 .divide {
     height: 30rpx;
     background-color: #f6f6f6;
+}
+
+.upload-btn {
+  margin: 0 auto;
+  margin-top: 30rpx;
+  width: 540rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 32rpx;
+  color: #fefefe;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 36rpx;
+  background: linear-gradient(170deg,#04e1cb,#15e68a);
+}
+
+.cancel-btn {
+  margin: 0 auto;
+  margin-top: 30rpx;
+  width: 540rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 32rpx;
+  color: #32e999;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 36rpx;
+  border: 1px solid #32e999;
 }

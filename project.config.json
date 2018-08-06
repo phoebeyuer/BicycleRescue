@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -54,6 +54,23 @@
 					"name": "authorize",
 					"pathName": "pages/authorize/authorize",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "person",
+					"pathName": "pages/person/person",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "help",
+					"pathName": "pages/help/help",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "help-record",
+					"pathName": "pages/help/record/record"
 				}
 			]
 		}

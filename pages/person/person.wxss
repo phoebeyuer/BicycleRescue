@@ -1,1 +1,155 @@
 /* pages/person/person.wxss */
+@import "./../../static/style/iconfont.wxss";
+
+page {
+  background: #f6f6f6;
+}
+/* 个人信息展示样式 */
+.person-info {
+  background: #fff;
+  height: 280rpx;
+  width: 100%;
+}
+
+.person-img {
+  margin: 0 auto;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 75rpx;
+  overflow: hidden;
+}
+
+.person-img image {
+  height: 150rpx;
+  width: 150rpx;
+}
+
+.person-name {
+  margin-top: 18rpx;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.person-score {
+  margin-top: 18rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+/* 个人中心按钮条样式 */
+.person-bar-container {
+  margin-top: 30rpx;
+}
+
+.person-bar {
+  margin-top: 2rpx;
+  height: 126rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.person-bar-list {
+  height: 126rpx;
+  width: 100%;
+}
+
+.person-text-item {
+  display: inline-block; 
+  margin-left: 26rpx;
+  height: 126rpx;
+  font-size: 32rpx;
+  line-height: 126rpx;
+  clear: both;
+}
+
+.iconfont {
+  display: inline-block;
+  float: right;
+  margin-right: 24rpx;
+  height: 126rpx;
+  line-height: 126rpx;
+}
+
+.iconfont:before {
+  font-family: iconfont;
+  content: "\e600";
+  font-size: 30rpx;
+  color: black;
+}
+
+.person-icon {
+  display: inline-block;
+  margin-left: 26rpx; 
+  height: 126rpx;
+  width: 45rpx;
+  vertical-align: middle;
+}
+
+.person-icon image {
+  display: inline-block;
+  margin-top: 37rpx;
+  height: 52rpx;
+  width: 48rpx;
+}
+
+/* 底部导航栏样式 */
+.bottom-pic {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: 100rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+
+/* 底部导航栏按钮样式 */
+.bottom-nav {
+  position: fixed; 
+  z-index: 99;
+  width: 100%;
+  height: 76rpx;
+  bottom: 12rpx; 
+  left: 0;
+  right: 0;
+}
+
+/* 要改font-family和font-size */
+.bottom-nav .index-nav{
+  float: left;
+  margin-left: 100rpx;
+  margin-right: 99rpx;
+  width: 52rpx;
+  height: 76rpx;
+  color: #999;
+  font-size: 20rpx;
+  text-align: center; 
+}
+
+.bottom-nav image {
+  width: 42rpx;
+  height: 48rpx;
+}
+
+/* 阿里字体图标 */
+/* @font-face { */
+/* font-family: 'iconfont';   */
+  /* project id 753779 */
+  /* src: url('//at.alicdn.com/t/font_753779_q4ofplzd9l9.eot');
+  src: url('//at.alicdn.com/t/font_753779_q4ofplzd9l9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_753779_q4ofplzd9l9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_753779_q4ofplzd9l9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_753779_q4ofplzd9l9.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;  
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gengduo:before { content: "\f0343"; } */
